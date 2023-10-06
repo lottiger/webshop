@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "webshop",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "webshop"
+	}
+}
