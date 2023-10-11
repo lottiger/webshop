@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -27,11 +28,6 @@
 .header-nav-list-item:hover {
   font-weight: bold;
   transition: 0, 4;
-  border-bottom: 2px solid rgb(147, 66, 66);
-}
-
-.container {
-  background-color: white;
 }
 
 .head-event {
@@ -51,6 +47,10 @@
   font-size: 1rem;
   padding: 20px 0px 20px 0px;
 }
+.head-event-tag {
+  color: white;
+  bottom: 40px;
+}
 .head-event-img {
   width: 100%;
   height: 400px;
@@ -59,22 +59,69 @@
 .head-event-img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .events {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .event {
   margin-top: 40px;
-  border: 1px solid black;
+  margin-bottom: 4s0px;
+  height: 450px;
+  width: 350px;
+}
+.event-content {
+  margin-left: 5px;
 }
 .event-img {
-  border-radius: 2px;
   margin-bottom: 20px;
+  width: 350px;
+  height: 250px;
 }
 .event-tag {
   text-transform: uppercase;
+  position: relative;
+  padding-left: 8px;
+}
+.event-header {
+  margin-bottom: 10px;
+}
+.event-button {
+  border-style: none;
+  background-color: transparent;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.event-button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+.event-tag::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.event-tag[data-category=music]::before {
+  background-color: #f3ad2b;
+}
+
+.event-tag[data-category=theater]::before {
+  background-color: rgb(46, 69, 196);
+}
+
+.event-tag[data-category=stand-up]::before {
+  background-color: limegreen;
+}
+
+.event-tag[data-category=sport]::before {
+  background-color: red;
 }/*# sourceMappingURL=styles.css.map */
