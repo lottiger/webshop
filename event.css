@@ -31,8 +31,30 @@
 }
 
 .container {
-  background-color: red;
   display: flex;
+  justify-content: center;
+  text-align: justify;
+  margin-top: 75px;
+  border: 1px solid black;
+}
+
+.event {
+  padding: 16px;
+}
+.event-title {
+  font-size: 3rem;
+  padding-bottom: 16px;
+}
+.event-button {
+  border-radius: 100px;
+  padding: 16px;
+  border: none;
+  background-color: rgb(179, 47, 14);
+  color: white;
+}
+.event-button:hover {
+  cursor: pointer;
+  filter: contrast(2);
 }
 
 .detail-img {
@@ -55,7 +77,32 @@
   grid-column: span 2;
 }
 .detail-img-img1:hover, .detail-img-img2:hover, .detail-img-img3:hover, .detail-img-img4:hover {
-  cursor: pointer;
   filter: contrast(2);
   transition: 0.3;
+}
+
+.catagori-tag {
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 8px;
+  margin-left: 4px;
+}
+
+.catagori-tag::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.catagori-tag[data-category=music]::before {
+  background-color: #f3ad2b;
+}
+
+@media screen and (max-width: 854px) {
+  .container {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=event.css.map */
