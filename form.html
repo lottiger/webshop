@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Tickets-Skapa event</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon-ticket.png">
+    <meta name="keywords" content="event, musik, sport, teater, underhållning, kultur, humor">
+    <meta name="description" content="Här kan du hitta de bästa biljetterna till dom hetaste evenemangen just nu">
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <header class="header">
         <h1 class="header-title">
-            Tickets 
+            <a href="index.html">Tickets</a>
         </h1>
         <nav class="header-navigator">
             <ul class="header-nav-list">
@@ -17,40 +20,35 @@
                 <li><a class="header-nav-list-item" href="#">Teater</a></li>
                 <li><a class="header-nav-list-item" href="#">Stand-up</a></li>
                 <li><a class="header-nav-list-item" href="#">Sport</a></li>
-                <li><a class="header-nav-list-item" href="#">Skapa eget event</a></li>
-                <li><a class="header-nav-list-item" href="#">Om oss</a></li>
+                <li><a class="header-nav-list-item header-current-page" href="form.html">Skapa eget event</a></li>
+                <li><a class="header-nav-list-item" href="om.html">Om oss</a></li>
 
 
             </ul>
-            <!-- <form class="header-search" action="" method="get">
-               <input type="search" name="" id="" placeholder="Evenemang,artist eller arena ">
-                <button type="submit">Sök</button>
-            </form> -->
+          
         </nav>
-        <div>
-            <h2>Skapa ditt eget event med formuläret nedan:</h2>
-        </div>
+        
   <div class="container">
    
     <form class="event-form">
-        <label for="Name">
+        <label class="event-form-label" for="Name">
             Event
         </label>
-        <input type="text" maxlength="255">
+        <input class="event-form-input" type="text" maxlength="255">
 
-        <label for="date">Datum</label>
-        <input type="date" min="2023-11-01" max="2024-12-31">
+        <label class="event-form-label" for="date">Datum</label>
+        <input class="event-form-input" type="date" min="2023-11-01" max="2024-12-31">
 
-        <label for="description">Beskrivning</label>
-        <textarea name="description" cols="50" rows="5" maxlength="500" required="true"></textarea>
+        <label class="event-form-label" for="description">Beskrivning</label>
+        <textarea class="event-form-input" name="description" cols="50" rows="5" maxlength="500" required="true"></textarea>
         
-        <label for="agenda">Agenda</label>
-        <textarea name="agenda" cols="50" rows="10" maxlength="700" required="true"></textarea>
+        <label class="event-form-label" for="agenda">Agenda</label>
+        <textarea class="event-form-input" name="agenda" cols="50" rows="10" maxlength="700" required="true"></textarea>
         
-        <label for="upload"> Ladda upp bilder</label>
-        <input type="file"id="upload" multiple max="4">
-        <label for="category">Välj kategori</label>
-        <select>
+        <label class="event-form-label" for="upload"> Ladda upp bilder</label>
+        <input class="event-form-input" type="file" id="upload" multiple max="4">
+        <label class="event-form-label" for="category">Välj kategori</label>
+        <select class="event-form-input">
         <option value="1"></option>
         <option value="2">Musik</option>
         <option value="3">Teater</option>
@@ -58,8 +56,7 @@
         <option value="5">Sport</option>
         
         </select>
-        <br>
-        <input type="submit" value="Skicka">
+        <input class="event-form-input event-form-submit"  type="submit" value="Skicka">
     </form>
   </div>  
 </body>

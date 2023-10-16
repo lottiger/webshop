@@ -25,6 +25,9 @@
   padding: 16px;
   border-radius: 3px;
 }
+.header-current-page {
+  font-weight: bold;
+}
 .header-nav-list-item:hover {
   font-weight: bold;
   transition: 0, 4;
@@ -34,12 +37,35 @@
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  background-color: lightgray;
+  margin-bottom: 40px;
+  border: 1px solid black;
 }
 
 .event-form {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  align-items: center;
+  width: 500px;
   padding: 20px;
+  background-color: rgb(250, 248, 245);
+}
+.event-form-label {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.event-form-input {
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: white;
+}
+.event-form-submit {
+  margin-top: 20px;
+  background-color: rgb(179, 47, 14);
+  color: white;
+  padding: 10px 30px 10px 30px;
+}
+.event-form-submit:hover {
+  cursor: pointer;
+  filter: contrast(2);
 }/*# sourceMappingURL=form.css.map */

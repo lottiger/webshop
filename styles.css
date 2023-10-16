@@ -5,6 +5,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: rgb(61, 57, 57);
+}
+
 .header {
   color: rgb(61, 57, 57);
 }
@@ -16,14 +21,15 @@
 .header-nav-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   padding: 24px;
+  margin-bottom: 20px;
 }
 .header-nav-list-item {
   text-decoration: none;
   color: rgb(61, 57, 57);
-  padding: 16px;
-  border-radius: 3px;
+  margin: 20px;
 }
 .header-nav-list-item:hover {
   font-weight: bold;
@@ -33,35 +39,65 @@
 .head-event {
   position: relative;
 }
-.head-event-header, .head-event-summery, .head-event-tag {
-  position: absolute;
-  color: white;
-  left: 100px;
+.head-event-a {
+  color: #e6e0e0;
 }
 .head-event-header {
-  top: 50px;
   font-size: 3rem;
+  margin: 0 50px 0 50px;
 }
 .head-event-summery {
-  top: 100px;
   font-size: 1rem;
-  padding: 20px 0px 20px 0px;
+  margin: 50px;
 }
 .head-event-tag {
   color: white;
-  bottom: 40px;
 }
 .head-event-img {
   width: 100%;
   height: 400px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.head-event-img:hover {
+.head-event-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.head-event:hover .head-event-img:hover .head-event-overlay {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.head-event:hover .head-event-overlay {
+  opacity: 1;
 }
 
+@media screen and (max-width: 1200px) {
+  .head-event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+}
 .events {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +106,6 @@
 
 .event {
   margin-top: 40px;
-  margin-bottom: 4s0px;
   height: 450px;
   width: 350px;
 }

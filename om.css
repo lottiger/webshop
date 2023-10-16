@@ -5,6 +5,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a {
+  list-style: none;
+}
+
 .header {
   color: rgb(61, 57, 57);
 }

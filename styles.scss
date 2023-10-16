@@ -7,12 +7,14 @@
     padding: 0;
     font-family:Arial, Helvetica, sans-serif;
 }
-// a{
-//   list-style: none;
-// }
+a{
+  text-decoration: none;
+  color: $primary-color;
+}
 
 .header{
 color: $primary-color; 
+
 
 &-title{
     display: flex;
@@ -23,55 +25,45 @@ color: $primary-color;
 &-nav-list{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     padding: 24px;
+    margin-bottom:20px ;
 }
 
  &-nav-list-item{
     text-decoration: none;
     color: $primary-color;
-    padding: 16px;
-    border-radius: 3px;
-    
+    margin: 20px; 
 }
+
 &-nav-list-item:hover{
     font-weight: bold;
     transition: 0,4;
 }
-//  &-search{
-//      display: flex;
-//      justify-content: flex-end;
-//      margin-right: 16px; 
-//  }
-
-
 }
+
 
 
 .head-event {
     position: relative;
-  
-    &-header,
-    &-summery,
-    &-tag {
-      position: absolute;
-      color: $background-color;
-      left: 100px;
+    
+    &-a{
+      color: #e6e0e0;
     }
-  
-    &-header {
-      top: 50px;
+
+    &-header{
       font-size: 3rem;
+      margin: 0 50px 0 50px;
     }
   
     &-summery {
-      top: 100px;
       font-size: 1rem;
-      padding: 20px 0px 20px 0px;
+      margin: 50px;
     }
+   
     &-tag{
       color: $background-color;
-      bottom: 40px;
       
     }
   
@@ -81,13 +73,51 @@ color: $primary-color;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
    
     }
-    &-img:hover{
-        transform: scale(1.05);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-        cursor: pointer;
+    &-overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 400px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
     }
+    &:hover
+    &-img:hover
+    &-overlay{
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);  
+    }
+    &:hover
+    &-overlay{
+      opacity: 1;
+    }
+   
   }
-  
+    @media screen and (max-width: 1200px){
+      .head-event-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+      }
+      
+    }
 
 .events{
     display: flex;
@@ -96,11 +126,8 @@ color: $primary-color;
     
 }  
 
-
 .event{
     margin-top: 40px;
-    margin-bottom: 4s0px;
-    // box-shadow: 3px 8px 6px 8px #e6e0e0;
     height: 450px;
     width: 350px;
 
@@ -108,11 +135,10 @@ color: $primary-color;
       margin-left: 5px;
     }
     
-   
     &-img{
-    margin-bottom: 20px;
-    width: 350px;
-    height: 250px;
+      margin-bottom: 20px;
+      width: 350px;
+      height: 250px;
     }
 
     &-tag{
@@ -153,17 +179,17 @@ color: $primary-color;
 
 
 .event-tag[data-category="music"]::before {
-background-color: #f3ad2b;
+  background-color: #f3ad2b;
 }
 
 .event-tag[data-category="theater"]::before {
- background-color: rgb(46, 69, 196);
+  background-color: rgb(46, 69, 196);
 }
 
 .event-tag[data-category="stand-up"]::before {
-background-color: limegreen
+  background-color: limegreen
 }
 
 .event-tag[data-category="sport"]::before {
-background-color: red;
+  background-color: red;
 }
