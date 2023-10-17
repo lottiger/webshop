@@ -10,16 +10,19 @@
 a{
   text-decoration: none;
   color: $primary-color;
+  
 }
 
 .header{
-color: $primary-color; 
+// color: $primary-color; 
+
 
 
 &-title{
     display: flex;
     justify-content: center;
-    padding: 32px;  
+    padding: 32px;
+    
 }
 
 &-nav-list{
