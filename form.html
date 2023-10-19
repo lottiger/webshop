@@ -7,56 +7,71 @@
     <link rel="icon" type="image/x-icon" href="./images/icon-ticket.png">
     <meta name="keywords" content="event, musik, sport, teater, underhållning, kultur, humor">
     <meta name="description" content="Här kan du hitta de bästa biljetterna till dom hetaste evenemangen just nu">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <header class="header">
-        <h1 class="header-title">
-            <a href="index.html">Tickets</a>
-             
-        </h1>
+        <a href="index.html">
+            <h1 class="header-title">
+                Tickets
+            </h1>
+        </a>
         <nav class="header-navigator">
             <ul class="header-nav-list">
-                <li><a class="header-nav-list-item" href="#sektion2">Musik</a></li>                
+                <li><a class="header-nav-list-item" href="event.html">Musik</a></li>                
                 <li><a class="header-nav-list-item" href="#sektion2">Teater</a></li>
                 <li><a class="header-nav-list-item" href="#sektion1">Stand-up</a></li>
                 <li><a class="header-nav-list-item" href="#sektion1">Sport</a></li>
-                <li><a class="header-nav-list-item" href="form.html">Skapa eget event</a></li>
+                <li><a class="header-nav-list-item" id="current-page"  href="form.html">Skapa eget event</a></li>
                 <li><a class="header-nav-list-item" href="om.html">Om oss</a></li>
             </ul>
         </nav>
     </header>
         
-  <div class="container">
-   
+  <div class="event">
     <form class="event-form">
-        <label class="event-form-label" for="Name">
+        <label class="event-label" for="Name">
             Event
         </label>
-        <input class="event-form-input" type="text" maxlength="255">
-
-        <label class="event-form-label" for="date">Datum</label>
-        <input class="event-form-input" type="date" min="2023-11-01" max="2024-12-31">
-
-        <label class="event-form-label" for="description">Beskrivning</label>
-        <textarea class="event-form-input" name="description" cols="50" rows="5" maxlength="500" required="true"></textarea>
-        
-        <label class="event-form-label" for="agenda">Agenda</label>
-        <textarea class="event-form-input" name="agenda" cols="50" rows="10" maxlength="700" required="true"></textarea>
-        
-        <label class="event-form-label" for="upload"> Ladda upp bilder</label>
+        <input class="event-input" type="text" maxlength="255">
+        <label class="event-label" for="date">
+            Datum
+        </label>
+        <input class="event-input" type="date" min="2023-11-01" max="2024-12-31">
+        <label class="event-label" for="description">
+            Beskrivning
+        </label>
+        <textarea class="event-input" name="description" cols="50" rows="5" maxlength="500" required="true"></textarea>
+        <label class="event-label" for="agenda">
+            Agenda
+        </label>
+        <textarea class="event-input" name="agenda" cols="50" rows="10" maxlength="700" required="true"></textarea>
+        <label class="event-form-label" for="upload">
+            Ladda upp bilder
+        </label>
         <input class="event-form-input" type="file" id="upload" multiple max="4">
-        <label class="event-form-label" for="category">Välj kategori</label>
-        
-        <select class="event-form-input">
-        <option value="1"></option>
-        <option value="2">Musik</option>
-        <option value="3">Teater</option>
-        <option value="4">Stand up</option>
-        <option value="5">Sport</option>
-    
+        <label class="event-label" for="category">
+            Välj kategori
+        </label>
+        <select class="event-input">
+        <option value="1">
+
+        </option>
+        <option value="2">
+            Musik
+        </option>
+        <option value="3">
+            Teater
+        </option>
+        <option value="4">
+            Stand up
+        </option>
+        <option value="5">
+            Sport
+        </option>
         </select>
-        <input class="event-form-input event-form-submit"  type="submit" value="Skicka">
+        <input class="event-input event-submit"  type="submit" value="Skicka">
     </form>
   </div>  
 </body>

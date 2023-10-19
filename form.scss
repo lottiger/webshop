@@ -1,59 +1,14 @@
 @import 'variables';
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
-}
-a{
-  text-decoration: none;
-  color: $primary-color;
-  
-}
-
-.header{
-// color: $primary-color; 
-
-
-
-&-title{
-    display: flex;
-    justify-content: center;
-    padding: 32px;
-    
-}
-
-&-nav-list{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 24px;
-    margin-bottom:20px ;
-}
-
- &-nav-list-item{
-    text-decoration: none;
-    color: $primary-color;
-    margin: 20px; 
-}
-
-&-nav-list-item:hover{
-    font-weight: bold;
-    transition: 0,4;
-}
-}
-.container{
+.event{
    display: flex;
    justify-content: center;
    margin-top: 40px;
    margin-bottom: 40px;
-   border: 1px solid black;
-   background-color: rgb(250, 248, 245);
-}
-    .event-form{
+   border: 1px solid $font-color;
+   background-color: $background-color2;
 
+    &-form{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,8 +16,8 @@ a{
         padding: 20px;
         margin-top: 40px;
         margin-bottom: 40px;
-        
-        background-color: rgb(218, 216, 213);
+        background-color: $background-color1;
+        }
 
         &-label{
            padding-bottom: 10px;
@@ -72,7 +27,7 @@ a{
             border: none;
             padding: 5px;
             border-radius: 10px;
-            background-color: white;
+            background-color:$background-color3;
         }
         &-input[type="file"]{
             background-color: transparent;
@@ -81,19 +36,23 @@ a{
             border: none;
             padding: 5px;
             border-radius: 10px;
-            background-color: white;
+            background-color: $background-color3;
             cursor: pointer;
         }
         &-submit{
             margin-top: 20px;
-            background-color: rgb(179, 47, 14);
-            color: white;
+            background-color:$primary-color;
+            color: $background-color3;
             padding: 10px 30px 10px 30px;
         }
         &-submit:hover{
             cursor: pointer;
             filter: contrast(2);
         }
-    
-   
+}
+
+@media screen and (max-width:800px) {
+    .event-form{
+        width: 400px;
+    }
 }
