@@ -1,34 +1,6 @@
 
 @import 'variables';
 
-.header{
-  
-    &-title{
-      display: flex;
-      justify-content: center;
-      padding: 32px;
-    }
-
-
-    &-nav-list{
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      list-style: none;
-      padding: 24px;
-      margin-bottom:20px ;
-    }
-
-    &-nav-list-item{
-      text-decoration: none;
-      margin: 20px;
-    }
-
-    &-nav-list-item:hover{
-      font-weight: bold;
-      transition: 0,4;
-    }
-}
 
 .head-event {
     position: relative;
